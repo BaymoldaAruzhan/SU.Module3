@@ -74,8 +74,27 @@ class Program
         Console.WriteLine("Текст после удаления слов с буквой 'a':");
         Console.WriteLine(result);
 
+        //8. Удалить из строки слова, в которых есть хоть одна буква последнего слова:
+        Console.WriteLine("8 Задание:");
+        string Text = "This is a sample text with some words that contain letters from the last word.";
+        string[] words = Text.Split(' ');
+        string lastWord = words[words.Length - 1].Trim(new char[] { '.', ',', '!', '?' }); // Последнее слово
 
+        for (int i = 0; i < words.Length - 1; i++)
+        {
+            if (words[i].IndexOfAny(lastWord.ToCharArray()) == -1)
+            {
+                Console.Write(words[i] + " ");
+            }
+        }
 
+        Console.WriteLine(lastWord);
+        //9.В строке выделить квадратными скобками слова, которые начинаются и заканчиваются одной буквой:
+        Console.WriteLine("9 Задание:");
+        string text = "This is a sample text with some words that contain letters from the last word.";
+        string pattern1 = @"\b(\w)\w*\1\b";
+        string result2 = Regex.Replace(text, pattern1, "[$0]");
+        Console.WriteLine(result2);
     }
 
 }
