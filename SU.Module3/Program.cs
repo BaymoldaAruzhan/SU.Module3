@@ -95,6 +95,7 @@ class Program
         string pattern1 = @"\b(\w)\w*\1\b";
         string result2 = Regex.Replace(text, pattern1, "[$0]");
         Console.WriteLine(result2);
+
     }
 
 }
