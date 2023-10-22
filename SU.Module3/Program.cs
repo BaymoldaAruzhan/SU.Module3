@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
 class Program
 {
@@ -58,7 +59,20 @@ class Program
         {
             Console.WriteLine(number);
         }
-        //7.
+        //7. Удалить из строки слова, в которых есть буква 'a':
+        Console.WriteLine("7 Задание:");
+        string inputText = "I don't know what to write.";
+
+        // Используем регулярное выражение для поиска слов с буквой 'a'
+        string pattern = @"\b\w*a\w*\b";
+
+        // Заменяем найденные слова на пустую строку
+        string result = Regex.Replace(inputText, pattern, "");
+
+        Console.WriteLine("Исходный текст:");
+        Console.WriteLine(inputText);
+        Console.WriteLine("Текст после удаления слов с буквой 'a':");
+        Console.WriteLine(result);
 
 
 
