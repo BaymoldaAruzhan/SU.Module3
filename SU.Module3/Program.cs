@@ -14,4 +14,5 @@ class Program
         int maxIndex = Array.IndexOf(numbers, numbers.Max());
         Console.WriteLine("Индекс максимального значения: " + maxIndex);
     }
+
 }
