@@ -23,6 +23,7 @@ class Program
         Console.WriteLine("4 Задание:");
         int indexToRemove = 2; // Индекс элемента для удаления
         numbers = numbers.Where((n, index) => index != indexToRemove).ToArray();
+        Console.WriteLine(numbers);
 
     }
 
