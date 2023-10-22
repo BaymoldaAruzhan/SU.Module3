@@ -22,8 +22,35 @@ class Program
         //4. Удалить элемент из массива по индексу:
         Console.WriteLine("4 Задание:");
         int indexToRemove = 2; // Индекс элемента для удаления
-        numbers = numbers.Where((n, index) => index != indexToRemove).ToArray();
-        Console.WriteLine(numbers);
+        if (indexToRemove >= 0 && indexToRemove < numbers.Length)
+        {
+            int[] newArray = new int[numbers.Length - 1];
+            for (int i = 0, j = 0; i < numbers.Length; i++)
+            {
+                if (i == indexToRemove)
+                    continue; // Пропускаем элемент, который нужно удалить
+                newArray[j] = numbers[i];
+                j++;
+            }
+
+            numbers = newArray;
+            
+
+        }
+        foreach (int number in numbers)
+        {
+            Console.WriteLine(number);
+        }
+        //5. Удаление элементов из массива по значению:
+        Console.WriteLine("5 Задание:");
+        int valueToRemove = 10; // Значение для удаления
+        numbers = numbers.Where(n => n != valueToRemove).ToArray();
+        foreach (int number in numbers)
+        {
+            Console.WriteLine(number);
+        }
+
+
 
     }
 
