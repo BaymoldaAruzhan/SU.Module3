@@ -6,11 +6,13 @@ class Program
     {
         //1. Напечатать весь массив целых чисел:
         int[] numbers = { 10, 20, 15, 25, 5 };
+        Console.WriteLine("1 Задание:");
         foreach (int number in numbers)
         {
-            Console.WriteLine("1 Задача:",number);
+            Console.WriteLine(number);
         }
         //2.Найти индекс максимального значения в массиве:
+        Console.WriteLine("2 Задание:");
         int maxIndex = Array.IndexOf(numbers, numbers.Max());
         Console.WriteLine("Индекс максимального значения: " + maxIndex);
     }
