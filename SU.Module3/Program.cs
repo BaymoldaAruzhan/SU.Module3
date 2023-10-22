@@ -19,6 +19,10 @@ class Program
         Console.WriteLine("3 Задание:");
         int maxEvenIndex = Array.IndexOf(numbers, numbers.Where(n => n % 2 == 0).Max());
         Console.WriteLine("Индекс максимального четного значения: " + maxEvenIndex);
+        //4. Удалить элемент из массива по индексу:
+        Console.WriteLine("4 Задание:");
+        int indexToRemove = 2; // Индекс элемента для удаления
+        numbers = numbers.Where((n, index) => index != indexToRemove).ToArray();
 
     }
 
