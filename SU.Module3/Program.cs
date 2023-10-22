@@ -52,12 +52,13 @@ class Program
         //6.Вставить элемент в массив по индексу
         Console.WriteLine("6 Задание:");
         int indexToInsert = 2; // Индекс для вставки
-        int valueToInsert = 45; // Значение для вставки
+        int valueToInsert = 20; // Значение для вставки
         numbers = numbers.Take(indexToInsert).Concat(new[] { valueToInsert }).Concat(numbers.Skip(indexToInsert)).ToArray();
         foreach (int number in numbers)
         {
             Console.WriteLine(number);
         }
+        //7.
 
 
 
